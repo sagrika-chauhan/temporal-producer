@@ -1,6 +1,6 @@
 package com.example.temporalproducer.worker;
 
-import com.example.temporalproducer.workflow.ActivityPlanWorkflowImpl;
+import com.example.temporalproducer.workflow.*;
 import com.maersk.composition.service.TemporalClientProvider;
 import io.temporal.client.WorkflowClient;
 import io.temporal.worker.WorkerFactory;
@@ -27,6 +27,9 @@ public class TemporalWorker implements ApplicationRunner {
 
     io.temporal.worker.Worker worker = factory.newWorker("emailProducer");//creating a worker using factory
     worker.registerWorkflowImplementationTypes(ActivityPlanWorkflowImpl.class);//register our workflow implementation
+    worker.registerWorkflowImplementationTypes(ChildWorkFlowImpl.class);
+    //worker.registerActivitiesImplementations(new ChildActivityImpl());
+
     factory.start();// starts our worker
   }
 

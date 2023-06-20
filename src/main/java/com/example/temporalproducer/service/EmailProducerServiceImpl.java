@@ -5,6 +5,7 @@ import com.example.temporalproducer.worker.TemporalWorker;
 import com.example.temporalproducer.workflow.ActivityPlanWorkflow;
 import io.temporal.client.WorkflowClient;
 import io.temporal.client.WorkflowOptions;
+import io.temporal.workflow.Workflow;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
