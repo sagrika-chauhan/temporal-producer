@@ -1,10 +1,6 @@
-package com.example.temporalproducer.service;
+package com.example.temporalproducer.mapper;
 
-import com.example.temporalproducer.billingmodel.FinancialOrderDomain;
 import com.example.temporalproducer.model.Booking;
-import com.example.temporalproducer.model.Instruction;
-import com.example.temporalproducer.model.Party;
-import com.example.temporalproducer.models.ActivityPlanEventModel;
 import com.example.temporalproducer.serviceplan.ActivityPlanRequest;
 import com.example.temporalproducer.serviceplan.ServicePlan;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -12,11 +8,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import net.apmoller.crb.telikos.activityplan.ActivityPlanEvent;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * Class to extract service plan from activity plan event.

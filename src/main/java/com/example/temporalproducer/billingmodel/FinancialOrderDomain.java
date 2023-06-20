@@ -1,50 +1,41 @@
 package com.example.temporalproducer.billingmodel;
 
-
-
-
-import lombok.*;
+import lombok.Builder;
 
 import java.util.List;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
-public class FinancialOrderDomain  {
-    String orderNumber;
+public record FinancialOrderDomain  (
 
-    String externalReferenceNumber;
+        String orderNumber,
 
-    String bookingNumber;
+        String externalReferenceNumber,
 
-    String soStatus;
+        String bookingNumber,
 
-    String soI;
+        String soStatus,
 
-    Integer invoiceId;
+        String soId,
 
-    Integer issuedDatetime;
+        Integer invoiceId,
 
-    String financialOrderBusinessTyp;
+        Integer issuedDatetime,
 
-    PaymentCondition paymentConditio;
+        String financialOrderBusinessType,
 
-    String agreementNumbe;
+        PaymentCondition paymentCondition,
 
-    List<Equipment> equipment;
+        String agreementNumber,
 
-    List<Parties> parties;
+        List<Equipment> equipment,
 
-    List<Locations> locations;
+        List<Parties> parties,
 
-    Brand brand;
+        List<Locations> locations,
 
-    DocumentPouch documentPouch;
+        Brand brand,
 
-    List<FinancialOrderLine> financialOrderLine;
+        DocumentPouch documentPouch,
 
+        List<FinancialOrderLine> financialOrderLine ){
 }
-
-

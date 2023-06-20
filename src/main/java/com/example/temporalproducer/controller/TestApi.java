@@ -3,13 +3,9 @@ package com.example.temporalproducer.controller;
 
 import com.example.temporalproducer.billingmodel.FinancialOrderDomain;
 import com.example.temporalproducer.mapper.BookingToBillingMapper;
-import com.example.temporalproducer.model.Booking;
 
-import com.example.temporalproducer.models.ActivityPlanEventModel;
-import com.example.temporalproducer.service.ServicePlanRetrievalService;
+import com.example.temporalproducer.mapper.ServicePlanRetrievalService;
 import com.example.temporalproducer.serviceplan.ServicePlan;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
